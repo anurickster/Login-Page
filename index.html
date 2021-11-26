@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+</head>
+<body>
+    <div class="header">
+        Register Here
+        <p>The registration only open for 18+ individual</p>
+    </div>
+
+    <div class="container">
+        <div class="formcontainer">
+            <form action="">
+                <label for="uname">Name</label><br>
+                <input required type="text" placeholder="Enter your name"><br>
+                <label for="email">Email</label><br>
+                <input required type="email" placeholder="Enter your E-Mail"><br>
+                <label for="age">Age</label><br>
+                <input required type="date" placeholder="How many years you old"><br>
+                <label for="role">Which option best describes your current Role</label><br>
+                <select name="role" id="role">
+                    <option value="null" selected>Select your Role</option>
+                    <option value="student">Student</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="Post-Graduate">Post Graduate</option>
+                    <option value="Back-Office">Back Office</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="consultant">Consultant</option>
+                    <option value="SoftwareEng">Software Engineer</option>
+                    <option value="Opration-Executive">Opration Executive</option>
+                    <option value="MERN-Developer">MERN Developer</option>
+                    <option value="MEAN-Developer">MEAN Developer</option>
+                    <option value="NodeJs">Node.JS Developer</option>
+                    <option value="ReactJs">ReactJs Developer</option>
+                </select><br>
+                <label for="gender">Your Gender</label><br>
+                <input required type="radio" value="Male" name="gender">Male</input><br>
+                <input required type="radio" value="Female" name="gender">Female</input><br>
+                <input required type="radio" value="Transgender" name="gender">Transgender</input><br><br>
+                <label for="username">Username</label>
+                <input required type="text" placeholder="Choose unique Username eg: johndoe123">
+                <label for="psw" >Password</label>
+                <input required type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Choose password as below requirements">
+                <div id="message">
+                    <h4>Password must contain the following:</h4>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                  </div>
+                  <br>
+                <label for="matchpassword">Confirm Password</label>
+                <input required type="password" placeholder="Confirm your password">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
